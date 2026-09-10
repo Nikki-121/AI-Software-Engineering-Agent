@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+button,
+textarea {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: #111827;
+  color: white;
+  padding: 28px 8%;
+}
+
+.header h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #cbd5e1;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #64748b;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.input-card,
+.progress-card,
+.result-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
+}
+
+.input-card label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+textarea:focus {
+  border-color: #2563eb;
+}
+
+.input-card button {
+  margin-top: 15px;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.input-card button:hover {
+  background: #1d4ed8;
+}
+
+.input-card button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.agent-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.agent-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.agent-number {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e2e8f0;
+  font-weight: bold;
+}
+
+.agent-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.agent-info span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.agent-item.active {
+  border-color: #2563eb;
+}
+
+.agent-item.active .agent-number {
+  background: #2563eb;
+  color: white;
+}
+
+.agent-item.completed {
+  border-color: #16a34a;
+}
+
+.agent-item.completed .agent-number {
+  background: #16a34a;
+  color: white;
+}
+
+.result-card h2 {
+  margin-bottom: 15px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.result-header button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 7px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+}
+
+.agent-badge {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+
+.error-box {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer span {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  .agent-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 94%;
+  }
+
+  .header {
+    padding: 24px 5%;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .hero h2 {
+    font-size: 25px;
+  }
+
+  .agent-list {
+    grid-template-columns: 1fr;
+  }
+
+  .result-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
